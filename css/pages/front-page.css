@@ -1,0 +1,35 @@
+
+.front-page {
+	display: flex;
+	width: fit-content;
+	height: fit-content;
+}
+
+.front-page-container {
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	flex-wrap: wrap;
+	width: 100vw;
+	height: 36.9rem;
+	background-color: #D9D9D9;
+	margin-top: 7.44rem;
+	font-family: var(--font-primary);
+	text-align: center;
+}
+
+.front-page-text {
+	display: flex;
+	flex-direction: column;
+	width: fit-content;
+	height: fit-content;
+	gap: 4.375rem;
+}
+
+.front-page-title {
+	font-size: var(--font-size-huge);
+}
+
+.front-page-description {
+	font-size: var(--font-size-header);
+}
