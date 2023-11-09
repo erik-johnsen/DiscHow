@@ -1,7 +1,4 @@
-ul {
-	list-style-type: none;
-}
-  
+
 * {
 	box-sizing: border-box;
 	margin: 0;
@@ -17,3 +14,12 @@ button, a {
 	touch-action: manipulation;
 	text-decoration: none;
 }
+
+ul {
+	list-style-type: none;
+}
+  
+textarea {
+	resize: none;
+  }
+
