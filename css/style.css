@@ -10,10 +10,10 @@
 header {
 	display: flex;
 	flex-flow: row nowrap;
-	position: fixed;
-	top: 1.33rem;
+	position: relative;
+	top: 1.5rem;
 	padding: 0rem 1.06rem;
-	align-items: center;
+	justify-content: center;
 	gap: 7.5rem;
 	font-family: var(--font-primary);
 }
@@ -33,6 +33,9 @@ header {
 .header-logo {
 	height: fit-content;
 	width: fit-content;
+	position: absolute;
+	left: 1rem;
+	top: -1rem;
 }
 .header-logo img {
 	height: 7.75rem;
