@@ -6,6 +6,9 @@
 	--color-secondary: #6AD2C5;
 	--color-background: #E9EAEC;
 
+	--font-primary: 'Open Sans', sans-serif;
+	--font-secondary: "Arial Rounded MT Bold";
+
 	--font-weight-regular: 400;
 	--font-weight-medium: 500;
 	--font-weight-semibold: 600;
