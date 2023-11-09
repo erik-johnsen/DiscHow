@@ -23,6 +23,7 @@
 		<div class="window-container">
 
 			<header>
+
 				<div class="header-button header-logo" data-button="home">
 					<img src="./assets/logo/DiscHowLogoV1.svg" alt="DiscHow Logo">
 				</div>
@@ -31,6 +32,7 @@
 					<span class="header-button" data-button="nybegynner">Nybegynner discer</span>
 					<span class="header-button" data-button="kontakt">Kontakt oss</span>
 				</span>
+
 			</header>
 
 
@@ -91,19 +93,25 @@
 				</div>
 			</div>
 
-			<div class="kontakt pages" data-page="kontakt">
+			<div class="kontakt pages " data-page="kontakt">
 				<div class="kontakt-text">
-					<div class="kontakt-title"></div>
-					<div class="kontakt-description"></div>
+					<div class="kontakt-title">Lurer du på noe angående oss eller discgolf? </div>
+					<div class="kontakt-description">
+						<div>Nøl ikke med å ta kontakt!</div>
+						<div>Fyll ut skjemaet under så tar vi kontakt så fort vi har tid!</div>
+					</div>
 				</div>
 
-				<div class="kontakt-skjema">
-					<input class="kontakt-skjema_navn" type="text" required placeholder="Ola Nordmann">
-					<input class="kontakt-skjema_telefon" type="number" required placeholder="Telefonnummer" maxlength="8">
-					<input class="kontakt-skjema_mail" type="email" required placeholder="ola.nordmann@hotmail.no">
-					<input class="kontakt-skjema_kommentar" type="text" required placeholder="Kommentar...">
+				<form class="kontakt-skjema">
+					<div class="grid-skjema">
+							<input class="kontakt-skjema_felt kontakt-skjema_navn" type="text" required placeholder="Ola Nordmann">
+							<input class="kontakt-skjema_felt kontakt-skjema_telefon" type="number" required placeholder="Telefonnummer" maxlength="8">
+							<input class="kontakt-skjema_felt kontakt-skjema_mail" type="email" required placeholder="ola.nordmann@hotmail.no">
+							<textarea class="kontakt-skjema_felt kontakt-skjema_kommentar" required placeholder="Kommentar..."></textarea>
+					</div>
+						
 					<button class="kontakt-skjema_submit">Send inn!</button>
-				</div>
+				</form>
 			</div>
 
 			<div class="disc-page">
