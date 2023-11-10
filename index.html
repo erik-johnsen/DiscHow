@@ -38,7 +38,7 @@
 
 
 
-			<div class="front-page pages visible" data-page="home">
+			<div class="front-page pages " data-page="home">
 				<div class="front-page-container">
 					<img class="front-page-image" src="" alt="">
 					<div class="front-page-text">
@@ -48,16 +48,57 @@
 				</div>
 			</div>
 
-			<div class="discer pages" data-page="discer">
+			<div class="discer pages visible" data-page="discer">
 				<aside class="sidebar">
-					<div class="filter-buttons merke">
-						<label class="merke-checkbox"></label>
-					</div>
-					<div class="filter-buttons type">
-						<label class="type-checkbox"></label>
+					<div class="filter-buttons">
+						<div class="filter-buttons-title merke-title">Merke</div>
+
+						<label class="merke-checkbox_label checkbox-label">
+							<input class="filter-checkbox_input checkbox" hidden type="checkbox" name="mvp" value="mvp">
+							<span class="filter-checkbox_text">MVP</span>
+						</label>
+
+						<label class="merke-checkbox_label checkbox-label">
+							<input class="filter-checkbox_input" hidden type="checkbox" name="discraft" value="discraft">
+							<span class="filter-checkbox_text">Discraft</span>
+						</label>
+
+						<label class="merke-checkbox_label checkbox-label">
+							<input class="filter-checkbox_input" hidden type="checkbox" name="discmania" value="discmania">
+							<span class="filter-checkbox_text">Discmania</span>
+						</label>
+
+						<label class="merke-checkbox_label checkbox-label">
+							<input class="filter-checkbox_input" hidden type="checkbox" name="kastaplast" value="kastaplast">
+							<span class="filter-checkbox_text">Kastaplast</span>
+						</label>
 
 					</div>
-					<div class="filter-buttons tall">
+					<div class="filter-buttons">
+						<div class="filter-buttons-title type-title">Type</div>
+
+						<label class="type-checkbox_label checkbox-label">
+							<input class="filter-checkbox_input" hidden type="checkbox" name="putter" value="putter">
+							<span class="filter-checkbox_text">Putter</span>
+						</label>
+
+						<label class="type-checkbox_label checkbox-label">
+							<input class="filter-checkbox_input" hidden type="checkbox" name="midrange" value="midrange">
+							<span class="filter-checkbox_text">Midrange</span>
+						</label>
+
+						<label class="type-checkbox_label checkbox-label">
+							<input class="filter-checkbox_input" hidden type="checkbox" name="fairway" value="fairway">
+							<span class="filter-checkbox_text">Fairway Driver</span>
+						</label>
+
+						<label class="type-checkbox_label checkbox-label">
+							<input class="filter-checkbox_input" hidden type="checkbox" name="distance" value="distance">
+							<span class="filter-checkbox_text">Distance Driver</span>
+						</label>
+
+					</div>
+					<div class="filter-buttons">
 						<label class="tall-checkbox"></label>
 
 					</div>
