@@ -25,12 +25,14 @@ navButtons.forEach(button => {
 // sidebar
 
 const sidebarButtons = document.querySelectorAll(".filter-buttons-title")
+
 const brandButton = document.querySelector(".merke-title")
 const typeButton = document.querySelector(".type-title")
+const tallButton = document.querySelector(".tall-title")
 
 const brandContent = document.querySelectorAll(".merke-checkbox_label")
 const typeContent = document.querySelectorAll(".type-checkbox_label")
-//const numberContent = document.querySelectorAll(".")
+const numberContent = document.querySelectorAll(".tall-label")
 
 sidebarButtons.forEach(button => {
 
@@ -50,6 +52,10 @@ sidebarButtons.forEach(button => {
 			})
 
 		} else {
+
+			numberContent.forEach(element => {
+				element.classList.toggle("sidebar-filter_visible")
+			})
 			
 		}
 	}
