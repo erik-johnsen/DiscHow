@@ -21,3 +21,38 @@ navButtons.forEach(button => {
 
 	button.addEventListener("click", ShowPages)
 })
+
+// sidebar
+
+const sidebarButtons = document.querySelectorAll(".filter-buttons-title")
+const brandButton = document.querySelector(".merke-title")
+const typeButton = document.querySelector(".type-title")
+
+const brandContent = document.querySelectorAll(".merke-checkbox_label")
+const typeContent = document.querySelectorAll(".type-checkbox_label")
+//const numberContent = document.querySelectorAll(".")
+
+sidebarButtons.forEach(button => {
+
+	function showFilters(event) {
+		const button = event.currentTarget
+		
+		if(button.textContent === "Merke") {
+
+			brandContent.forEach(element => {
+				element.classList.toggle("sidebar-filter_visible")
+			})
+
+		} else if(button.textContent === "Type") {
+
+			typeContent.forEach(element => {
+				element.classList.toggle("sidebar-filter_visible")
+			})
+
+		} else {
+			
+		}
+	}
+
+	button.addEventListener("click", showFilters)
+})
