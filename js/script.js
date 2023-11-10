@@ -34,6 +34,8 @@ const brandContent = document.querySelectorAll(".merke-checkbox_label")
 const typeContent = document.querySelectorAll(".type-checkbox_label")
 const numberContent = document.querySelectorAll(".tall-label")
 
+// sidebar dropdown function
+
 sidebarButtons.forEach(button => {
 
 	function showFilters(event) {
@@ -56,9 +58,39 @@ sidebarButtons.forEach(button => {
 			numberContent.forEach(element => {
 				element.classList.toggle("sidebar-filter_visible")
 			})
-			
+
 		}
 	}
 
 	button.addEventListener("click", showFilters)
 })
+
+// sidebar slider outputvalue
+
+const sliders = document.querySelectorAll(".filter-slider")
+
+const connectSliderAndOutput = {
+	"range-speed": "outputValue-speed",
+	"range-glide": "outputValue-glide",
+	"range-turn": "outputValue-turn",
+	"range-fade": "outputValue-fade"
+}
+
+const displaySliderOutput = () => {
+
+	sliders.forEach(slider => {
+		const outputValue = document.getElementById(connectSliderAndOutput[slider.id])
+				
+		if(slider && outputValue) {
+			outputValue.innerHTML = slider.value
+
+			slider.oninput = function() {
+				outputValue.innerHTML = this.value
+			}
+		}
+	})
+}
+
+sliders.forEach(slider => {
+    slider.addEventListener("input", displaySliderOutput);
+});
