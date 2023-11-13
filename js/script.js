@@ -4,6 +4,8 @@
 const navButtons = document.querySelectorAll(".nav-button")
 const pages = document.querySelectorAll(".pages")
 
+const footer = document.querySelector(".footer-container")
+
 navButtons.forEach(button => {
 	function ShowPages(event) {
 
@@ -16,7 +18,15 @@ navButtons.forEach(button => {
 			if (site.dataset.page === pageToDisplay) {
 				site.classList.add("visible")
 			}
+
+			if (button.dataset.button === "discer") {
+				footer.classList.add("visible")
+			} else {
+				footer.classList.remove("visible")
+			}
+
 		})
+
 		window.scrollTo({top: 0, behavior: "instant"})
 	}
 
