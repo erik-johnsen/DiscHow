@@ -1,7 +1,7 @@
 
 //nav buttons
 
-const navButtons = document.querySelectorAll(".header-button")
+const navButtons = document.querySelectorAll(".nav-button")
 const pages = document.querySelectorAll(".pages")
 
 navButtons.forEach(button => {

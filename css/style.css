@@ -5,8 +5,8 @@ body {
 .window-container {
 	display: flex;
 	flex-direction: column;
+	height: fit-content;
 	width: 100vw;
-	height: 100vh;
 }
 
 header {
@@ -27,7 +27,7 @@ header {
 	border-bottom: 1px solid black;
 }
 
-.header-button {
+.nav-button {
 	font-size: var(--font-size-header);
 }
 
@@ -44,7 +44,7 @@ header {
 	width: 7.75rem;
 } 
 
-.header-button:hover {
+.nav-button:hover {
 	cursor: pointer;
 	transform: scale(105%);
 	transition: all 200ms ease;
@@ -52,7 +52,20 @@ header {
 
 
 .footer {
-	display: none;
+	display: flex;
+	flex-direction: column;
+	margin-top: 0.93rem;
+	width: 100%;
+	height: 30rem;
+	background-color: var(--color-primary);
+
+}
+
+.footer-websitename {
+	display: flex;
+	max-width: 100%;
+	width: 60rem;
+	margin: auto;
 }
 
 .visible {
