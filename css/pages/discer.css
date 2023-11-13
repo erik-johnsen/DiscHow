@@ -8,7 +8,7 @@
 	display: flex;
 	flex-direction: column;
 	width: 13rem;
-	margin-top: 13rem;
+	margin-top: 9rem;
 	margin-left: 1rem;
 	gap: 2.5rem;
 }
@@ -118,3 +118,20 @@
 	display: block;
 }
 
+.grid-discer {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	height: fit-content;
+	gap: 0.93rem;
+	margin-top: 9rem;
+	margin-left: 1.37rem;
+}
+
+.disc {
+	width: 17rem;
+	height: 16rem;
+	background-color: aquamarine;
+	display: flex;
+	flex-direction: column;
+
+}
