@@ -17,6 +17,7 @@ navButtons.forEach(button => {
 				site.classList.add("visible")
 			}
 		})
+		window.scrollTo({top: 0, behavior: "instant"})
 	}
 
 	button.addEventListener("click", ShowPages)
