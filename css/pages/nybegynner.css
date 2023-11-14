@@ -1,4 +1,37 @@
 
 .nybegynner-discer {
 	display: none;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 6rem;
+}
+
+.ny-discer-text {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 53rem;
+	gap: 4rem;
+	font-family: var(--font-primary);
+}
+
+.ny-discer-title {
+	font-size: var(--font-size-large);
+	font-weight: var(--font-weight-medium);
+}
+
+.ny-discer-description {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+	font-size: var(--font-size-header);
+	font-weight: var(--font-weight-regular);
+}
+
+.grid-nydiscer {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	height: fit-content;
+	gap: 0.93rem;
+	margin-top: 4rem;
 }
