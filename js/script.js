@@ -1,4 +1,63 @@
 
+const discs = [
+    {
+		"image": "./assets/Disc-img/disc-img_anax.jpeg",
+        "name": "ESP Anax",
+        "brand": "Discraft",
+        "speed": "10",
+        "glide": "6",
+        "turn": "0",
+        "fade": "3",
+		"disc-type": "distance"
+    },    
+
+	{
+		"image": "./assets/Disc-img/disc-img_hex.png",
+        "name": "Hex",
+        "brand": "MVP",
+        "speed": "5",
+        "glide": "5",
+        "turn": "-1",
+        "fade": "1",
+		"disc-type": "midrange"
+
+    },
+	   
+	{
+		"image": "./assets/Disc-img/disc-img_wraith.jpg",
+        "name": "Wraith",
+        "brand": "Innova",
+        "speed": "11",
+        "glide": "5",
+        "turn": "-1",
+        "fade": "3",
+		"disc-type": "distance"
+    }
+];
+
+// adding discs to DOM
+
+const gridDiscer = document.querySelector(".grid-discer")
+
+discs.forEach(disc => {
+	
+	let discString = `<div class="disc" data-brand="${disc.brand}" data-disc-type="${disc.disc-type}">`+  
+						`<a class="disc-img" href="">` +
+							`<img src="${disc.image}" alt="Image of the disc ${disc.name}">` +
+						`</a>`+
+						`<div class="disc-info">`+
+							`<div class="disc-tall">${disc.speed} ${disc.glide} ${disc.turn} ${disc.fade}</div>`+
+							`<div class="disc-navn">${disc.name}</div>`+
+							`<div class="disc-merke">${disc.brand}</div>` +
+						`</div>`+
+					`</div>`
+
+	
+	const discHtml = new DOMParser().parseFromString(discString, 'text/html')
+	const divDiscs = discHtml.querySelector(".disc")
+	gridDiscer.append(divDiscs)
+})
+
 //nav buttons
 
 const navButtons = document.querySelectorAll(".nav-button")
@@ -105,3 +164,5 @@ const displaySliderOutput = () => {
 sliders.forEach(slider => {
     slider.addEventListener("input", displaySliderOutput);
 });
+
+// sidebar filter function 
