@@ -1,39 +1,5 @@
 
-const discs = [
-    {
-		"image": "./assets/Disc-img/disc-img_anax.jpeg",
-        "name": "ESP Anax",
-        "brand": "Discraft",
-        "speed": "10",
-        "glide": "6",
-        "turn": "0",
-        "fade": "3",
-		"disc-type": "distance"
-    },    
-
-	{
-		"image": "./assets/Disc-img/disc-img_hex.png",
-        "name": "Hex",
-        "brand": "MVP",
-        "speed": "5",
-        "glide": "5",
-        "turn": "-1",
-        "fade": "1",
-		"disc-type": "midrange"
-
-    },
-	   
-	{
-		"image": "./assets/Disc-img/disc-img_wraith.jpg",
-        "name": "Wraith",
-        "brand": "Innova",
-        "speed": "11",
-        "glide": "5",
-        "turn": "-1",
-        "fade": "3",
-		"disc-type": "distance"
-    }
-];
+import { discs } from './discs.js';
 
 // adding discs to DOM
 
@@ -41,7 +7,7 @@ const gridDiscer = document.querySelector(".grid-discer")
 
 discs.forEach(disc => {
 	
-	let discString = `<div class="disc" data-brand="${disc.brand}" data-disc-type="${disc.disc-type}">`+  
+	let discString = `<div class="disc" data-brand="${disc.brand}" data-disc-type="${disc["disc-type"]}">`+  
 						`<a class="disc-img" href="">` +
 							`<img src="${disc.image}" alt="Image of the disc ${disc.name}">` +
 						`</a>`+
@@ -166,3 +132,31 @@ sliders.forEach(slider => {
 });
 
 // sidebar filter function 
+
+const filterButtons = document.querySelectorAll(".filter-button")
+
+
+const filterItems = () => {
+
+	const filterButtons = document.querySelectorAll(".filter-button")
+
+	let activeFilters = [...filterButtons].filter(item => {
+		return item.checked === true
+	})
+
+	
+	const filterDiscs = filter(item => {
+		return activeFilters.every(element => {
+			let filterBy = element.dataset.filterBy
+			let filterValue = element.dataset.filterValue
+			return item[filterBy] === filterValue
+		})
+	})
+	console.log(filterDiscs);
+	
+}
+
+
+filterButtons.forEach(button => {
+	button.addEventListener("click", filterItems)
+})
