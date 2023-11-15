@@ -103,3 +103,7 @@ header {
 .visible {
 	display: flex;
 }
+
+.not-visible {
+	display: none;
+}
