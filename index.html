@@ -39,7 +39,7 @@
 
 
 
-			<div class="front-page pages " data-page="home">
+			<div class="front-page pages visible" data-page="home">
 				<div class="front-page-container">
 					<img class="front-page-image" src="" alt="">
 					<div class="front-page-text">
@@ -49,7 +49,7 @@
 				</div>
 			</div>
 
-			<div class="discer pages visible" data-page="discer">
+			<div class="discer pages" data-page="discer">
 				<aside class="sidebar">
 					<div class="filter-buttons">
 						<div class="filter-buttons-title merke-title">Merke</div>
@@ -79,70 +79,27 @@
 						<div class="filter-buttons-title type-title">Type</div>
 
 						<label class="type-checkbox_label checkbox-label">
-							<input class="filter-checkbox_input filter-button" hidden type="checkbox" data-filter-value="putter" data-filter-by="disc-type">
+							<input class="filter-checkbox_input filter-button" hidden type="checkbox" data-filter-value="putter" data-filter-by="discType">
 							<span class="filter-checkbox_text">Putter</span>
 						</label>
 
 						<label class="type-checkbox_label checkbox-label">
-							<input class="filter-checkbox_input filter-button" hidden type="checkbox" data-filter-value="midrange" data-filter-by="disc-type">
+							<input class="filter-checkbox_input filter-button" hidden type="checkbox" data-filter-value="midrange" data-filter-by="discType">
 							<span class="filter-checkbox_text">Midrange</span>
 						</label>
 
 						<label class="type-checkbox_label checkbox-label">
-							<input class="filter-checkbox_input filter-button" hidden type="checkbox" data-filter-value="fairway" data-filter-by="disc-type">
+							<input class="filter-checkbox_input filter-button" hidden type="checkbox" data-filter-value="fairway" data-filter-by="discType">
 							<span class="filter-checkbox_text">Fairway Driver</span>
 						</label>
 
 						<label class="type-checkbox_label checkbox-label">
-							<input class="filter-checkbox_input filter-button" hidden type="checkbox" data-filter-value="distance" data-filter-by="disc-type">
+							<input class="filter-checkbox_input filter-button" hidden type="checkbox" data-filter-value="distance" data-filter-by="discType">
 							<span class="filter-checkbox_text">Distance Driver</span>
 						</label>
 
 					</div>
-					<div class="filter-buttons">
-						<div class="filter-buttons-title tall-title">Tall</div>
-
-						<label class="tall-label checkbox-label">
-
-							<div class="filter-slider_output">
-								<span class="filter-slider_type">Speed</span>
-								<span class="outputValue" id="outputValue-speed"></span>
-							</div>
-							<input class="filter-slider" type="range" min="1" max="14" value="" id="range-speed">
-				
-						</label>
-
-						<label class="tall-label checkbox-label">
-
-							<div class="filter-slider_output">
-								<span class="filter-slider_type">Glide</span>
-								<span class="outputValue" id="outputValue-glide"></span>
-							</div>
-							<input class="filter-slider" type="range" min="1" max="7" value="" id="range-glide">
-				
-						</label>
-
-						<label class="tall-label checkbox-label">
-
-							<div class="filter-slider_output">
-								<span class="filter-slider_type">Turn</span>
-								<span class="outputValue" id="outputValue-turn"></span>
-							</div>
-							<input class="filter-slider" type="range" min="-5" max="1" value="" id="range-turn">
-				
-						</label>
-
-						<label class="tall-label checkbox-label">
-
-							<div class="filter-slider_output">
-								<span class="filter-slider_type">Fade</span>
-								<span class="outputValue" id="outputValue-fade"></span>
-							</div>
-							<input class="filter-slider" type="range" min="0" max="5" value="" id="range-fade">
-				
-						</label>
-
-					</div>
+					
 				</aside>
 
 				<div class="grid-discer pages ">

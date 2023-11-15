@@ -7,7 +7,7 @@ const gridDiscer = document.querySelector(".grid-discer")
 
 discs.forEach(disc => {
 	
-	let discString = `<div class="disc" data-brand="${disc.brand}" data-disc-type="${disc["disc-type"]}">`+  
+	let discString = `<div class="disc" data-brand="${disc.brand}" data-disc-type="${disc.discType}">`+  
 						`<a class="disc-img" href="">` +
 							`<img src="${disc.image}" alt="Image of the disc ${disc.name}">` +
 						`</a>`+
@@ -139,20 +139,28 @@ const filterButtons = document.querySelectorAll(".filter-button")
 const filterItems = () => {
 
 	const filterButtons = document.querySelectorAll(".filter-button")
+	const divDiscs = document.querySelectorAll(".disc")
 
 	let activeFilters = [...filterButtons].filter(item => {
 		return item.checked === true
 	})
-
+	divDiscs.forEach(item => {
 	
-	const filterDiscs = filter(item => {
-		return activeFilters.every(element => {
+		let shouldInclude = activeFilters.every(element => {
 			let filterBy = element.dataset.filterBy
 			let filterValue = element.dataset.filterValue
-			return item[filterBy] === filterValue
+			return item.dataset[filterBy] === filterValue 
 		})
+
+		
+		if(shouldInclude === false) {
+			item.classList.add("not-visible")
+		} else {
+			item.classList.remove("not-visible")
+		}
+		
+		
 	})
-	console.log(filterDiscs);
 	
 }
 
