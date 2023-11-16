@@ -111,3 +111,8 @@ header {
 .not-visible {
 	display: none;
 }
+
+.invalid-contact-form {
+	border: 2px solid red;
+	transition: all 50ms ease;
+}
