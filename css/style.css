@@ -49,6 +49,10 @@ header {
 	transition: all 200ms ease;
 }
 
+.header-logo:active {
+	transform: scale(95%);
+}
+
 /* footer */
 
 .footer-container {
