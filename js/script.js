@@ -8,7 +8,7 @@ const gridDiscer = document.querySelector(".grid-discer")
 
 discs.forEach(disc => {
 	
-	let discString = `<div class="disc" data-brand="${disc.brand}" data-disc-type="${disc.discType}">`+  
+	let discString = `<div class="disc filter-discs" data-brand="${disc.brand}" data-disc-type="${disc.discType}">`+  
 						`<a class="disc-img" href="">` +
 							`<img src="${disc.image}" alt="Image of the disc ${disc.name}">` +
 						`</a>`+
@@ -125,7 +125,7 @@ const filterButtons = document.querySelectorAll(".filter-button")
 const filterItems = () => {
 
 	const filterButtons = document.querySelectorAll(".filter-button")
-	const divDiscs = document.querySelectorAll(".disc")
+	const divDiscs = document.querySelectorAll(".filter-discs")
 
 	let activeFilters = [...filterButtons].filter(item => {
 		return item.checked === true
