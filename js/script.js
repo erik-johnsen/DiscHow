@@ -150,7 +150,25 @@ const filterItems = () => {
 	
 }
 
-
 filterButtons.forEach(button => {
 	button.addEventListener("click", filterItems)
 })
+
+// Kontakt oss form, extract the value function
+
+const contantInputField = document.querySelectorAll(".kontakt-skjema_felt")
+const submitButton = document.querySelector(".kontakt-skjema_submit")
+
+let storedContactInfo = []
+const storingInputValue = () => {
+	let personInfo = {
+		name: document.querySelector(".kontakt-skjema_navn").value,
+		number: document.querySelector(".kontakt-skjema_telefon").value,
+		email: document.querySelector(".kontakt-skjema_mail").value,
+		comment: document.querySelector(".kontakt-skjema_kommentar").value
+	}
+
+	storedContactInfo.push(personInfo)
+}
+
+submitButton.addEventListener("click", storingInputValue)
