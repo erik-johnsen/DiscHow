@@ -1,180 +1,223 @@
 const discs = [
     {
-		    "image": "./assets/Disc-img/disc-img_anax.jpeg",
+		"image": "./assets/Disc-img/disc-img_anax.jpeg",
         "name": "ESP Anax",
         "brand": "discraft",
         "speed": "10",
         "glide": "6",
         "turn": "0",
         "fade": "3",
-		    "discType": "distance"
+		"discType": "distance"
     },    
 
 	{
-		    "image": "./assets/Disc-img/disc-img_hex.png",
+		"image": "./assets/Disc-img/disc-img_hex.png",
         "name": "Hex",
         "brand": "mvp",
         "speed": "5",
         "glide": "5",
         "turn": "-1",
         "fade": "1",
-		    "discType": "midrange"
+		"discType": "midrange"
 
     },
 	   
 	{
-		    "image": "./assets/Disc-img/disc-img_wraith.jpg",
+		"image": "./assets/Disc-img/disc-img_wraith.jpg",
         "name": "Wraith",
         "brand": "innova",
         "speed": "11",
         "glide": "5",
         "turn": "-1",
         "fade": "3",
-		    "discType": "distance"
+		"discType": "distance"
     },
 
 	{
-		    "image": "./assets/Disc-img/disc-img_berg.jpg",
+		"image": "./assets/Disc-img/disc-img_berg.jpg",
         "name": "Berg",
         "brand": "kastaplast",
         "speed": "1",
         "glide": "1",
         "turn": "0",
         "fade": "2",
-		    "discType": "putter"
+		"discType": "putter"
     },
 
 	{
-		   "image": "./assets/Disc-img/disc-img_destroyer.jpeg",
+		"image": "./assets/Disc-img/disc-img_destroyer.jpeg",
         "name": "Destroyer",
         "brand": "innova",
         "speed": "12",
         "glide": "5",
         "turn": "-1",
         "fade": "3",
-		    "discType": "distance"
+		"discType": "distance"
     },
 	
 	{
-		   "image": "./assets/Disc-img/disc-img_envy.jpeg",
+		"image": "./assets/Disc-img/disc-img_envy.jpeg",
         "name": "Envy",
         "brand": "mvp",
         "speed": "3",
         "glide": "3",
         "turn": "0",
         "fade": "2",
-		    "discType": "putter"
+		"discType": "putter"
     },
 
     {
-		    "image": "./assets/Disc-img/disc-img_falk.png",
+		"image": "./assets/Disc-img/disc-img_falk.png",
         "name": "Falk",
         "brand": "kastaplast",
         "speed": "9",
         "glide": "6",
         "turn": "-2",
         "fade": "1",
-		    "discType": "distance"
+		"discType": "distance"
     },      
 
     {
-		    "image": "./assets/Disc-img/disc-img_fd.jpeg",
+		"image": "./assets/Disc-img/disc-img_fd.jpeg",
         "name": "FD",
         "brand": "discmania",
         "speed": "7",
         "glide": "6",
         "turn": "0",
         "fade": "1",
-		    "discType": "fairway"
+		"discType": "fairway"
     }, 
     
     {
-		    "image": "./assets/Disc-img/disc-img_glitch.jpeg",
+		"image": "./assets/Disc-img/disc-img_glitch.jpeg",
         "name": "Glitch",
         "brand": "mvp",
         "speed": "1",
         "glide": "7",
         "turn": "0",
         "fade": "0",
-		    "discType": "putter"
+		"discType": "putter"
     },
 
     {
-		    "image": "./assets/Disc-img/disc-img_kaxe.jpeg",
+		"image": "./assets/Disc-img/disc-img_kaxe.jpeg",
         "name": "Kaxe",
         "brand": "kastaplast",
         "speed": "6",
         "glide": "4",
         "turn": "0",
         "fade": "3",
-	    	"discType": "midrange"
+	    "discType": "midrange"
     },
 
     {
-	    	"image": "./assets/Disc-img/disc-img_leopard.jpeg",
+	    "image": "./assets/Disc-img/disc-img_leopard.jpeg",
         "name": "Leopard",
         "brand": "innova",
         "speed": "6",
         "glide": "5",
         "turn": "-2",
         "fade": "1",
-	    	"discType": "fairway"
+	    "discType": "fairway"
     },
 
     {
-	    	"image": "./assets/Disc-img/disc-img_link.jpeg",
+	    "image": "./assets/Disc-img/disc-img_link.jpeg",
         "name": "Link",
         "brand": "discmania",
         "speed": "2",
         "glide": "3",
         "turn": "0",
         "fade": "1",
-	    	"discType": "putter"
+	    "discType": "putter"
     },
 
     {
-    		"image": "./assets/Disc-img/disc-img_penrose.jpeg",
+    	"image": "./assets/Disc-img/disc-img_penrose.jpeg",
         "name": "Penrose",
         "brand": "ev-7",
         "speed": "2",
         "glide": "4",
         "turn": "0",
         "fade": "2",
-		    "discType": "putter"
+		"discType": "putter"
     },
 
     {
-		    "image": "./assets/Disc-img/disc-img_roc.jpeg",
+		"image": "./assets/Disc-img/disc-img_roc.jpeg",
         "name": "Roc",
         "brand": "innova",
         "speed": "4",
         "glide": "4",
         "turn": "0",
         "fade": "3",
-	    	"discType": "midrange"
+	    "discType": "midrange"
     },
 
     {
-	    	"image": "./assets/Disc-img/disc-img_teebird.jpeg",
+	    "image": "./assets/Disc-img/disc-img_teebird.jpeg",
         "name": "Teebird",
         "brand": "innova",
         "speed": "7",
         "glide": "5",
         "turn": "0",
         "fade": "2",
-	    	"discType": "fairway"
+	    "discType": "fairway"
     },
 
     {
-		    "image": "./assets/Disc-img/disc-img_zone.jpeg",
+		"image": "./assets/Disc-img/disc-img_zone.jpeg",
         "name": "Zone",
         "brand": "discraft",
         "speed": "4",
         "glide": "3",
         "turn": "0",
         "fade": "3",
-		    "discType": "putter"
+		"discType": "putter"
     },
 ];
 
 export { discs }
+
+const newDiscs = [
+    {
+		"image": "./assets/Disc-img/new-page_img/new-disc-img_diamond.jpeg",
+        "name": "Diamond",
+        "brand": "Latitude 64",
+        "speed": "8",
+        "glide": "6",
+        "turn": "-3",
+        "fade": "1",
+    },
+
+    {
+		"image": "./assets/Disc-img/new-page_img/new-disc-img_envy.jpeg",
+        "name": "Envy",
+        "brand": "MVP",
+        "speed": "3",
+        "glide": "3",
+        "turn": "-1",
+        "fade": "2",
+    },
+
+    {
+		"image": "./assets/Disc-img/new-page_img/new-disc-img_mako3.jpeg",
+        "name": "Mako3",
+        "brand": "Innova",
+        "speed": "5",
+        "glide": "5",
+        "turn": "0",
+        "fade": "0",
+    },
+
+    {
+		"image": "./assets/Disc-img/new-page_img/new-disc-img_svea.jpeg",
+        "name": "Svea",
+        "brand": "Kastaplast",
+        "speed": "5",
+        "glide": "6",
+        "turn": "-1",
+        "fade": "0",
+    },
+
+]
