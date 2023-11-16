@@ -138,29 +138,44 @@ const filterItems = () => {
 			return item.dataset[filterBy] === filterValue 
 		})
 
-		
 		if(shouldInclude === false) {
 			item.classList.add("not-visible")
 		} else {
 			item.classList.remove("not-visible")
-		}
-		
-		
+		}	
 	})
-	
 }
 
 filterButtons.forEach(button => {
 	button.addEventListener("click", filterItems)
 })
 
+// Kontakt oss form, check if every field is filled out function
+const contactForm = document.querySelector(".kontakt-skjema")
+const contactInputFields = document.querySelectorAll(".kontakt-skjema_felt")
+
+
+const validateForm = () => {
+	if(contactForm.checkValidity() === true) {
+		storingInputValue()
+	}
+	contactInputFields.forEach(input => {
+		if(input.checkValidity() === false) {
+			input.classList.add("invalid-contact-form")
+		} else {
+			input.classList.remove("invalid-contact-form")
+		}
+	})	
+}
+
 // Kontakt oss form, extract the value function
 
-const contantInputField = document.querySelectorAll(".kontakt-skjema_felt")
+
 const submitButton = document.querySelector(".kontakt-skjema_submit")
 
 let storedContactInfo = []
 const storingInputValue = () => {
+
 	let personInfo = {
 		name: document.querySelector(".kontakt-skjema_navn").value,
 		number: document.querySelector(".kontakt-skjema_telefon").value,
@@ -169,6 +184,7 @@ const storingInputValue = () => {
 	}
 
 	storedContactInfo.push(personInfo)
+	console.log(storedContactInfo);
 }
 
-submitButton.addEventListener("click", storingInputValue)
+submitButton.addEventListener("click", validateForm)
