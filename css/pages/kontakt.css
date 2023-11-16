@@ -68,6 +68,21 @@
 	font-size: var(--font-size-medium);
 }
 
+.kontakt-skjema_checkmark {
+	background-image: url(/assets/submit-button_checkmark.svg);
+	background-size: cover;
+	font-family: var(--font-primary);
+	height: 2rem;
+	width: 2rem;
+	border-radius: 100%;
+	background-color: #7EDA39;
+}
+
 .kontakt-skjema_submit:hover {
 	background-color: var(--color-secondary);
+}
+
+.kontakt-skjema_submit:active {
+	background-color: var(--color-primary);
+	color: var(--color-secondary);
 }

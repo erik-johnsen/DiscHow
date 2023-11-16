@@ -153,11 +153,16 @@ filterButtons.forEach(button => {
 // Kontakt oss form, check if every field is filled out function
 const contactForm = document.querySelector(".kontakt-skjema")
 const contactInputFields = document.querySelectorAll(".kontakt-skjema_felt")
+const submitButton = document.querySelector(".kontakt-skjema_submit")
 
 
 const validateForm = () => {
 	if(contactForm.checkValidity() === true) {
 		storingInputValue()
+
+		submitButton.textContent = ""
+		submitButton.classList.remove("kontakt-skjema_submit")
+		submitButton.classList.add("kontakt-skjema_checkmark")
 	}
 	contactInputFields.forEach(input => {
 		if(input.checkValidity() === false) {
@@ -170,8 +175,6 @@ const validateForm = () => {
 
 // Kontakt oss form, extract the value function
 
-
-const submitButton = document.querySelector(".kontakt-skjema_submit")
 
 let storedContactInfo = []
 const storingInputValue = () => {
