@@ -221,3 +221,5 @@ const newDiscs = [
     },
 
 ]
+
+export { newDiscs }
