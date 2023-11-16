@@ -19,11 +19,17 @@
 }
 
 .front-page-text {
-	display: flex;
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
 	flex-direction: column;
 	width: fit-content;
 	height: fit-content;
 	gap: 4.375rem;
+	padding: 1rem 1.5rem;
+	font-weight: var(--font-weight-semibold);
+	color: #fff;
 }
 
 .front-page-title {
@@ -32,4 +38,10 @@
 
 .front-page-description {
 	font-size: var(--font-size-header);
+}
+
+.front-page-image {
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
 }
