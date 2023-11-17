@@ -117,6 +117,12 @@ header {
 	transition: all 50ms ease;
 }
 
-.darker {
-	filter: brightness(70%)
+.fade-in {
+	animation: fadein 300ms;
 }
+
+@keyframes fadein {
+	from {opacity: 0;}
+	to {opacity: 1;}
+}
+

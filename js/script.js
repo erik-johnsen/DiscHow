@@ -65,6 +65,8 @@ const discPopup = (event) => {
 				discPopupDiv.remove()
 				
 			})
+
+			discPopupDiv.classList.add("fade-in")
 		}
 	})
 }
