@@ -116,3 +116,7 @@ header {
 	border: 2px solid red;
 	transition: all 50ms ease;
 }
+
+.darker {
+	filter: brightness(70%)
+}

@@ -8,10 +8,10 @@ const gridDiscer = document.querySelector(".grid-discer")
 
 discs.forEach(disc => {
 	
-	let discString = `<div class="disc filter-discs" data-brand="${disc.brand}" data-disc-type="${disc.discType}">`+  
-						`<a class="disc-img" href="">` +
+	let discString = `<div class="disc filter-discs" data-brand="${disc.brand}" data-disc-type="${disc.discType}" data-name="${disc.name}">`+  
+						`<div class="disc-img">` +
 							`<img src="${disc.image}" alt="Image of the disc ${disc.name}">` +
-						`</a>`+
+						`</div>`+
 						`<div class="disc-info">`+
 							`<div class="disc-tall">${disc.speed} ${disc.glide} ${disc.turn} ${disc.fade}</div>`+
 							`<div class="disc-navn">${disc.name}</div>`+
@@ -23,6 +23,55 @@ discs.forEach(disc => {
 	const discHtml = new DOMParser().parseFromString(discString, 'text/html')
 	const divDiscs = discHtml.querySelector(".disc")
 	gridDiscer.append(divDiscs)
+})
+
+// disc description popup
+
+const everyDiscInGrid = document.querySelectorAll(".disc")
+const discerPage = document.querySelector(".discer")
+
+const discPopup = (event) => {
+	const button = event.currentTarget
+	const discThatPopup = button.dataset.name
+
+	discs.forEach(disc => {
+		if(discThatPopup === disc.name) {
+			let discPopupTemplate = `<div class="disc-popup">` +
+										`<span class="disc-popup-title">`+
+											`<img class="disc-popup-img" src="${disc.image}" alt="Image of the disc ${disc.name}"">`+
+											`<div class="disc-popup-title-text">`+
+												`<div class="disc-popup-title_name">${disc.name}</div>` +
+												`<div class="disc-popup-title_number">${disc.speed} ${disc.glide} ${disc.turn} ${disc.fade}</div>`+
+												`<div class="disc-popup-title_brand">${disc.brand}</div>`+
+											`</div>`+
+											`<button class="button-popup-close">close</button>`+
+										`</span>`+
+										`<div class="disc-popup-description">`+
+												`<div class="disc-popup_description">`+
+													`<div class="disc-popup-description_title">Informasjon om discen</div>`+
+													`<div class="disc-popup-description_description">${disc.description}</div>`+
+												`</div>`+
+										`</div>` +
+									`</div>`
+
+			const discHtml = new DOMParser().parseFromString(discPopupTemplate, "text/html")
+			const discPopupDiv = discHtml.querySelector(".disc-popup")
+			discerPage.append(discPopupDiv)
+
+
+			const closePopUpButton = document.querySelector(".button-popup-close")
+			closePopUpButton.addEventListener("click", (event) => {
+				const discPopupDiv = document.querySelector(".disc-popup")
+				discPopupDiv.remove()
+				
+			})
+		}
+	})
+}
+
+everyDiscInGrid.forEach(disc => {
+	disc.addEventListener("click", discPopup)
+
 })
 
 // adding discs to DOM "Nybegynner discer" page
@@ -151,6 +200,7 @@ filterButtons.forEach(button => {
 })
 
 // Kontakt oss form, check if every field is filled out function
+
 const contactForm = document.querySelector(".kontakt-skjema")
 const contactInputFields = document.querySelectorAll(".kontakt-skjema_felt")
 const submitButton = document.querySelector(".kontakt-skjema_submit")
