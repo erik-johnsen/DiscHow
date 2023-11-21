@@ -192,6 +192,40 @@ const discs = [
 		"discType": "putter",
     "description": "Advanced players love the overstable, low-profiled Zone putter. Will hold the line without flipping on long approaches, and delivers predictable putts even in windy conditions."
     },
+
+    {
+      "image": "./assets/Disc-img/new-page_img/new-disc-img_diamond.jpeg",
+          "name": "Diamond",
+          "brand": "Latitude 64",
+          "speed": "8",
+          "glide": "6",
+          "turn": "-3",
+          "fade": "1",
+          "description": "Diamond is the choice of disc for beginners, children and players with moderate arm speed. It is manly produced in lower weights which makes it easy to throw and control. It has an understable flight path with good glide and slight fade."
+      },
+  
+      {
+      "image": "./assets/Disc-img/new-page_img/new-disc-img_mako3.jpeg",
+          "name": "Mako3",
+          "brand": "Innova",
+          "speed": "5",
+          "glide": "5",
+          "turn": "0",
+          "fade": "0",
+          "description": "This Mid-Range disc is the perfect solution for anyone who wants a straight flyer with very limited fade. The Mako3 is available in Champion plastic, and it's faster than the original Mako. Players will like the Mako3's glide for added distance. The easy to grip and release rim offers clean consistent releases. The Mako3 is a great disc for one disc rounds."
+      },
+  
+      {
+      "image": "./assets/Disc-img/new-page_img/new-disc-img_svea.jpeg",
+          "name": "Svea",
+          "brand": "Kastaplast",
+          "speed": "5",
+          "glide": "6",
+          "turn": "-1",
+          "fade": "0",
+          "description": "This easy-to-use disc might be your secret weapon to perform the lines you need. However, don’t mistake it for a beginners only disc. Whenever you need massive glide, Svea will deliver. It offers a lower profile than our Göte midrange disc, making it suitable for smaller hands. Easy to grip and easy to release. Svea is an old Swedish name which is derived from the people of Svea Rike, later Sweden."
+      },
+  
 ];
 
 export { discs }

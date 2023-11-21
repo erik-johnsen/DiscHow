@@ -4,6 +4,7 @@ import { newDiscs } from './discs.js';
 
 // adding discs to DOM "Discer" page
 
+
 const gridDiscer = document.querySelector(".grid-discer")
 
 discs.forEach(disc => {
@@ -25,9 +26,32 @@ discs.forEach(disc => {
 	gridDiscer.append(divDiscs)
 })
 
+
+// adding discs to DOM "Nybegynner discer" page
+
+
+const gridNyDiscer = document.querySelector(".grid-nydiscer")
+
+newDiscs.forEach(disc => {
+	
+	let discString = `<div class="disc" data-name="${disc.name}">`+  
+						`<img class="disc-img" src="${disc.image}" alt="Image of the disc ${disc.name}"">` +
+						`<div class="disc-info">`+
+							`<div class="disc-tall">${disc.speed} ${disc.glide} ${disc.turn} ${disc.fade}</div>`+
+							`<div class="disc-navn">${disc.name}</div>`+
+							`<div class="disc-merke">${disc.brand}</div>` +
+						`</div>`+
+					`</div>`
+
+	
+	const discHtml = new DOMParser().parseFromString(discString, 'text/html')
+	const divDiscs = discHtml.querySelector(".disc")
+	gridNyDiscer.append(divDiscs)
+})
+
+
 // disc description popup
 
-const everyDiscInGrid = document.querySelectorAll(".disc")
 const discerPage = document.querySelector(".discer")
 
 const discPopup = (event) => {
@@ -38,7 +62,7 @@ const discPopup = (event) => {
 		if(discThatPopup === disc.name) {
 			let discPopupTemplate = `<div class="disc-popup">` +
 										`<span class="disc-popup-title">`+
-											`<img class="disc-popup-img" src="${disc.image}" alt="Image of the disc ${disc.name}"">`+
+											`<img class="disc-popup-img" src="${disc.image}" alt="Image of the disc ${disc.name}">`+
 											`<div class="disc-popup-title-text">`+
 												`<div class="disc-popup-title_name">${disc.name}</div>` +
 												`<div class="disc-popup-title_number">${disc.speed} ${disc.glide} ${disc.turn} ${disc.fade}</div>`+
@@ -56,11 +80,16 @@ const discPopup = (event) => {
 
 			const discHtml = new DOMParser().parseFromString(discPopupTemplate, "text/html")
 			const discPopupDiv = discHtml.querySelector(".disc-popup")
-			discerPage.append(discPopupDiv)
+
+			if (button.classList.contains("filter-discs")) {
+				discerPage.append(discPopupDiv)
+			} else {
+				gridNyDiscer.append(discPopupDiv)
+			}
 
 
 			const closePopUpButton = document.querySelector(".button-popup-close")
-			closePopUpButton.addEventListener("click", (event) => {
+			closePopUpButton.addEventListener("click", () => {
 				const discPopupDiv = document.querySelector(".disc-popup")
 				discPopupDiv.remove()
 				
@@ -70,33 +99,10 @@ const discPopup = (event) => {
 		}
 	})
 }
-
+const everyDiscInGrid = document.querySelectorAll(".disc")
 everyDiscInGrid.forEach(disc => {
 	disc.addEventListener("click", discPopup)
 
-})
-
-// adding discs to DOM "Nybegynner discer" page
-
-const gridNyDiscer = document.querySelector(".grid-nydiscer")
-
-newDiscs.forEach(disc => {
-	
-	let discString = `<div class="disc">`+  
-						`<a class="disc-img" href="">` +
-							`<img src="${disc.image}" alt="Image of the disc ${disc.name}">` +
-						`</a>`+
-						`<div class="disc-info">`+
-							`<div class="disc-tall">${disc.speed} ${disc.glide} ${disc.turn} ${disc.fade}</div>`+
-							`<div class="disc-navn">${disc.name}</div>`+
-							`<div class="disc-merke">${disc.brand}</div>` +
-						`</div>`+
-					`</div>`
-
-	
-	const discHtml = new DOMParser().parseFromString(discString, 'text/html')
-	const divDiscs = discHtml.querySelector(".disc")
-	gridNyDiscer.append(divDiscs)
 })
 
 //nav buttons
