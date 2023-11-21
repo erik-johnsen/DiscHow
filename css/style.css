@@ -43,6 +43,9 @@ header {
 	width: 7.75rem;
 } 
 
+.nav-button {
+	padding: 1rem;
+}
 .nav-button:hover {
 	cursor: pointer;
 	transform: scale(105%);
