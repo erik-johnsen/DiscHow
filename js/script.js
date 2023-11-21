@@ -243,3 +243,4 @@ const storingInputValue = () => {
 }
 
 submitButton.addEventListener("click", validateForm)
+
