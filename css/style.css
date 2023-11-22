@@ -45,6 +45,7 @@ header {
 
 .nav-button {
 	padding: 1rem;
+	transition: all 200ms ease;
 }
 .nav-button:hover {
 	cursor: pointer;
