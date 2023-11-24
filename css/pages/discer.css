@@ -28,6 +28,18 @@
 	padding: 0.81rem 0rem;
 }
 
+.mobile-filter-button {
+	position: absolute;
+	top: -5rem;
+	left: 1rem;
+	font-size: var(--font-size-header);
+	font-family: var(--font-primary);
+	background-color: var(--color-primary);
+	color: var(--color-background);
+	padding: 0.5rem 1rem;
+	cursor: pointer;
+}
+
 .filter-buttons:hover {
 	background-color: white;
 	transition: all 100ms;
@@ -88,6 +100,7 @@
 /* the discs */
 
 .grid-discer {
+	position: relative;
 	display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
 	min-height: calc(100vh - 9rem);
@@ -224,4 +237,15 @@
 
 .button-popup-close:hover {
 	font-weight: var(--font-weight-semibold);
+}
+
+/* responsive */
+
+@media screen and (max-width: 1067px) {
+	.sidebar {
+		display: none;
+	}
+	.grid-discer {
+		width: 100%;
+	}
 }
