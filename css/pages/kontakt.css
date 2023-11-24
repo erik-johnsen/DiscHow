@@ -86,3 +86,17 @@
 	background-color: var(--color-primary);
 	color: var(--color-secondary);
 }
+
+/* responsive */
+
+@media screen and (max-width: 904px) {
+	.kontakt-skjema {
+		width: 80%;
+	}
+	.grid-skjema {
+		width: 100%;
+	}
+	.kontakt-title {
+		font-size: var(--font-size-header);
+	}
+}
