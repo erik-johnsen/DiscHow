@@ -6,6 +6,7 @@
 }
 
 .front-page-container {
+	position: relative;
 	display: flex;
 	justify-content: center;
 	align-content: center;
@@ -19,7 +20,7 @@
 }
 
 .front-page-text {
-	position: fixed;
+	position: absolute;
 	left: 50%;
 	top: 50%;
 	transform: translate(-50%, -50%);
