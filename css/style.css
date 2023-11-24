@@ -130,3 +130,33 @@ header {
 	to {opacity: 1;}
 }
 
+/*  responsive  */
+
+@media screen and (max-width: 1272px){
+	/* header */
+	header {
+		justify-content: flex-end;
+		padding: 0;
+		width: 90%;
+	}
+	.header-nav {
+		display: flex;
+		text-align: right;
+		flex-direction: column;
+		gap: 0rem;
+		border-bottom: 0px;
+		padding: 0.81rem 1rem;
+		font-size: var(--font-size-medium);
+	}
+	.nav-button {
+		padding: 0.5rem;
+	}
+	/* footer */
+	.footer-content_text {
+		margin-right: 0;
+	}
+	.footer-content {
+		margin: 0 auto;
+		width: 90%;
+	}
+}
