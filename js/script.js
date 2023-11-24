@@ -141,6 +141,8 @@ navButtons.forEach(button => {
 
 // sidebar
 
+const sidebar = document.querySelector('.sidebar')
+
 const sidebarButtons = document.querySelectorAll(".filter-buttons-title")
 
 const brandButton = document.querySelector(".merke-title")
@@ -206,6 +208,22 @@ const filterItems = () => {
 filterButtons.forEach(button => {
 	button.addEventListener("click", filterItems)
 })
+
+// responsive mobile filter button
+const sidebarCloseButton = document.querySelector('.sidebar-close')
+const mobileFilterButton = document.querySelector('.mobile-filter-button')
+
+const mobileShowFilters = () => {
+	sidebar.classList.add('visible')
+}
+
+const mobileHideFilters = () => {
+	sidebar.classList.remove('visible')
+}
+
+mobileFilterButton.addEventListener('click', mobileShowFilters)
+sidebarCloseButton.addEventListener('click', mobileHideFilters)
+
 
 // Kontakt oss form, check if every field is filled out function
 
