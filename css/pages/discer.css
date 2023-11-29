@@ -29,6 +29,7 @@
 }
 
 .mobile-filter-button {
+	display: none;
 	position: absolute;
 	top: -5rem;
 	left: 1rem;
@@ -40,6 +41,16 @@
 	cursor: pointer;
 }
 
+.sidebar-mobile-close {
+	display: none;
+	font-size: var(--font-size-medium);
+	font-family: var(--font-primary);
+	background-color: var(--color-primary);
+	color: var(--color-background);
+	padding: 0.5rem 1rem;
+	cursor: pointer;
+}
+ 
 .filter-buttons:hover {
 	background-color: white;
 	transition: all 100ms;
@@ -244,8 +255,20 @@
 @media screen and (max-width: 1067px) {
 	.sidebar {
 		display: none;
+		position: absolute;
+		left: 0;
+		z-index: 1;
+		background-color: var(--color-background);
+		font-size: var();
+		height: 100vh;
 	}
 	.grid-discer {
 		width: 100%;
+	}
+	.mobile-filter-button {
+		display: flex;
+	}
+	.sidebar-mobile-close {
+		display: flex;
 	}
 }

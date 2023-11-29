@@ -2,10 +2,52 @@
 import { discs } from './discs.js';
 import { newDiscs } from './discs.js';
 
-// adding discs to DOM "Discer" page
-
+// MOVE ALL OFF QUERYSELECTORS AND EMPTY ARRAYS HERE
 
 const gridDiscer = document.querySelector(".grid-discer")
+const gridNyDiscer = document.querySelector(".grid-nydiscer")
+
+// discs popup
+
+const discerPage = document.querySelector(".discer")
+const everyDiscInGrid = document.querySelectorAll(".disc")
+
+// nav buttons 
+
+const navButtons = document.querySelectorAll(".nav-button")
+const pages = document.querySelectorAll(".pages")
+const footer = document.querySelector(".footer-container")
+
+// sidebar filtering
+
+const sidebar = document.querySelector('.sidebar')
+const sidebarButtons = document.querySelectorAll(".filter-buttons-title")
+const brandContent = document.querySelectorAll(".merke-checkbox_label")
+const typeContent = document.querySelectorAll(".type-checkbox_label")
+
+const filterButtons = document.querySelectorAll(".filter-button")
+
+// responsive mobile filter button
+
+const sidebarCloseButton = document.querySelector('.sidebar-mobile-close')
+const mobileFilterButton = document.querySelector('.mobile-filter-button')
+
+// contact us, valdate form 
+
+const contactForm = document.querySelector(".kontakt-skjema")
+const contactInputFields = document.querySelectorAll(".kontakt-skjema_felt")
+const submitButton = document.querySelector(".kontakt-skjema_submit")
+
+// contact us form storing value
+
+const formNameInput = document.querySelector(".kontakt-skjema_navn")
+const formNumberInput = document.querySelector(".kontakt-skjema_telefon")
+const formMailInput = document.querySelector(".kontakt-skjema_mail")
+const formCommentInput = document.querySelector(".kontakt-skjema_kommentar")
+
+let storedContactInfo = []
+
+// adding discs to DOM "Discer" page
 
 discs.forEach(disc => {
 	
@@ -29,9 +71,6 @@ discs.forEach(disc => {
 
 // adding discs to DOM "Nybegynner discer" page
 
-
-const gridNyDiscer = document.querySelector(".grid-nydiscer")
-
 newDiscs.forEach(disc => {
 	
 	let discString = `<div class="disc" data-name="${disc.name}">`+  
@@ -51,8 +90,6 @@ newDiscs.forEach(disc => {
 
 
 // disc description popup
-
-const discerPage = document.querySelector(".discer")
 
 const discPopup = (event) => {
 	const button = event.currentTarget
@@ -99,18 +136,13 @@ const discPopup = (event) => {
 		}
 	})
 }
-const everyDiscInGrid = document.querySelectorAll(".disc")
+
 everyDiscInGrid.forEach(disc => {
 	disc.addEventListener("click", discPopup)
 
 })
 
 //nav buttons
-
-const navButtons = document.querySelectorAll(".nav-button")
-const pages = document.querySelectorAll(".pages")
-
-const footer = document.querySelector(".footer-container")
 
 function ShowPages(event) {
 
@@ -139,18 +171,6 @@ navButtons.forEach(button => {
 	button.addEventListener("click", ShowPages)
 })
 
-// sidebar
-
-const sidebar = document.querySelector('.sidebar')
-
-const sidebarButtons = document.querySelectorAll(".filter-buttons-title")
-
-const brandButton = document.querySelector(".merke-title")
-const typeButton = document.querySelector(".type-title")
-
-const brandContent = document.querySelectorAll(".merke-checkbox_label")
-const typeContent = document.querySelectorAll(".type-checkbox_label")
-
 // sidebar dropdown function
 
 function showFilters(event) {
@@ -177,9 +197,6 @@ sidebarButtons.forEach(button => {
 
 
 // sidebar filter function 
-
-const filterButtons = document.querySelectorAll(".filter-button")
-
 
 const filterItems = () => {
 
@@ -210,8 +227,6 @@ filterButtons.forEach(button => {
 })
 
 // responsive mobile filter button
-const sidebarCloseButton = document.querySelector('.sidebar-close')
-const mobileFilterButton = document.querySelector('.mobile-filter-button')
 
 const mobileShowFilters = () => {
 	sidebar.classList.add('visible')
@@ -226,11 +241,6 @@ sidebarCloseButton.addEventListener('click', mobileHideFilters)
 
 
 // Kontakt oss form, check if every field is filled out function
-
-const contactForm = document.querySelector(".kontakt-skjema")
-const contactInputFields = document.querySelectorAll(".kontakt-skjema_felt")
-const submitButton = document.querySelector(".kontakt-skjema_submit")
-
 
 const validateForm = () => {
 	if(contactForm.checkValidity() === true) {
@@ -251,15 +261,13 @@ const validateForm = () => {
 
 // Kontakt oss form, extract the value function
 
-
-let storedContactInfo = []
 const storingInputValue = () => {
 
 	let personInfo = {
-		name: document.querySelector(".kontakt-skjema_navn").value,
-		number: document.querySelector(".kontakt-skjema_telefon").value,
-		email: document.querySelector(".kontakt-skjema_mail").value,
-		comment: document.querySelector(".kontakt-skjema_kommentar").value
+		name: formNameInput.value,
+		number: formNumberInput.value,
+		email: formMailInput.value,
+		comment: formCommentInput.value
 	}
 
 	storedContactInfo.push(personInfo)
@@ -267,4 +275,3 @@ const storingInputValue = () => {
 }
 
 submitButton.addEventListener("click", validateForm)
-
