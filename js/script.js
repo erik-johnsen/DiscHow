@@ -47,6 +47,8 @@ const formCommentInput = document.querySelector(".kontakt-skjema_kommentar")
 
 let storedContactInfo = []
 
+let userNumber = 0
+
 // adding discs to DOM "Discer" page
 
 discs.forEach(disc => {
@@ -263,7 +265,10 @@ const validateForm = () => {
 
 const storingInputValue = () => {
 
+	userNumber += 1
+
 	let personInfo = {
+		userNumber: userNumber,
 		name: formNameInput.value,
 		number: formNumberInput.value,
 		email: formMailInput.value,
