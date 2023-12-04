@@ -6,7 +6,7 @@
 	gap: 4rem;
 }
 
-.kontakt-text {
+.contact-text {
 	display: flex;
 	flex-direction: column;
 	font-family: var(--font-primary);
@@ -14,12 +14,12 @@
 	gap: 2rem;
 }
 
-.kontakt-title {
+.contact-title {
 	font-size: var(--font-size-large);
 	font-weight: 500;
 }
 
-.grid-skjema {
+.grid-form {
 	display: grid;
 	grid-template-columns: repeat(10, 1fr);
 	grid-template-rows: repeat(6, 1fr);
@@ -28,27 +28,27 @@
 	height: 21rem;
 }
 
-.kontakt-skjema_kommentar {
+.contact-form_comment {
 	grid-row: 3 / 7;
 	grid-column: 1 / -1;
 }
 
-.kontakt-skjema_mail {
+.contact-form_mail {
 	grid-row: 2 / 3;
 	grid-column: 1 / -1;
 }
 
-.kontakt-skjema_telefon {
+.contact-form_phone {
 	grid-row: 1 / 2;
 	grid-column: 7 / 11;
 }
 
-.kontakt-skjema_navn {
+.contact-form_name {
 	grid-row: 1 / 2;
 	grid-column: 1 / 7;
 }
 
-.kontakt-skjema_felt {
+.contact-form_field {
 	border-radius: 0;
 	border: 1px solid black;
 	font-family: var(--font-primary);
@@ -58,7 +58,7 @@
 	padding: 0.3rem;
 }
 
-.kontakt-skjema_submit {
+.contact-form_submit {
 	margin-top: 0.81rem;
 	border: 1px solid black;
 	background-color: white;
@@ -68,7 +68,7 @@
 	font-size: var(--font-size-medium);
 }
 
-.kontakt-skjema_checkmark {
+.contact-form_checkmark {
 	background-image: url(/assets/submit-button_checkmark.svg);
 	background-size: cover;
 	font-family: var(--font-primary);
@@ -78,11 +78,11 @@
 	background-color: #7EDA39;
 }
 
-.kontakt-skjema_submit:hover {
+.contact-form_submit:hover {
 	background-color: var(--color-secondary);
 }
 
-.kontakt-skjema_submit:active {
+.contact-form_submit:active {
 	background-color: var(--color-primary);
 	color: var(--color-secondary);
 }
@@ -90,13 +90,13 @@
 /* responsive */
 
 @media screen and (max-width: 904px) {
-	.kontakt-skjema {
+	.contact-form {
 		width: 80%;
 	}
-	.grid-skjema {
+	.grid-form {
 		width: 100%;
 	}
-	.kontakt-title {
+	.contact-title {
 		font-size: var(--font-size-header);
 	}
 }

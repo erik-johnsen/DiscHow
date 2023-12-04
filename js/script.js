@@ -2,10 +2,10 @@
 import { discs } from './discs.js';
 import { newDiscs } from './discs.js';
 
-// MOVE ALL OFF QUERYSELECTORS AND EMPTY ARRAYS HERE
+// Queryselectors and 
 
-const gridDiscer = document.querySelector(".grid-discer")
-const gridNyDiscer = document.querySelector(".grid-nydiscer")
+const gridDiscer = document.querySelector(".grid__discer")
+const gridNyDiscer = document.querySelector(".grid__new-discer")
 
 // discs popup
 
@@ -22,8 +22,8 @@ const footer = document.querySelector(".footer-container")
 
 const sidebar = document.querySelector('.sidebar')
 const sidebarButtons = document.querySelectorAll(".filter-buttons-title")
-const brandContent = document.querySelectorAll(".merke-checkbox_label")
-const typeContent = document.querySelectorAll(".type-checkbox_label")
+const brandContent = document.querySelectorAll(".brand__checkbox-label")
+const typeContent = document.querySelectorAll(".type__checkbox-label")
 
 const filterButtons = document.querySelectorAll(".filter-button")
 
@@ -34,16 +34,16 @@ const mobileFilterButton = document.querySelector('.mobile-filter-button')
 
 // contact us, valdate form 
 
-const contactForm = document.querySelector(".kontakt-skjema")
-const contactInputFields = document.querySelectorAll(".kontakt-skjema_felt")
-const submitButton = document.querySelector(".kontakt-skjema_submit")
+const contactForm = document.querySelector(".contact-form")
+const contactInputFields = document.querySelectorAll(".contact-form_field")
+const submitButton = document.querySelector(".contact-form_submit")
 
 // contact us form storing value
 
-const formNameInput = document.querySelector(".kontakt-skjema_navn")
-const formNumberInput = document.querySelector(".kontakt-skjema_telefon")
-const formMailInput = document.querySelector(".kontakt-skjema_mail")
-const formCommentInput = document.querySelector(".kontakt-skjema_kommentar")
+const formNameInput = document.querySelector(".contact-form_name")
+const formNumberInput = document.querySelector(".contact-form_phone")
+const formMailInput = document.querySelector(".contact-form_mail")
+const formCommentInput = document.querySelector(".contact-form_comment")
 
 let storedContactInfo = []
 
@@ -249,8 +249,8 @@ const validateForm = () => {
 		storingInputValue()
 
 		submitButton.textContent = ""
-		submitButton.classList.remove("kontakt-skjema_submit")
-		submitButton.classList.add("kontakt-skjema_checkmark")
+		submitButton.classList.remove("contact-form_submit")
+		submitButton.classList.add("contact-form_checkmark")
 	}
 	contactInputFields.forEach(input => {
 		if(input.checkValidity() === false) {

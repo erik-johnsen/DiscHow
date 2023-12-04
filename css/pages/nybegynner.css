@@ -6,7 +6,7 @@
 	margin-top: 6rem;
 }
 
-.ny-discer-text {
+.new-discer__text {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -15,12 +15,12 @@
 	font-family: var(--font-primary);
 }
 
-.ny-discer-title {
+.new-discer__title {
 	font-size: var(--font-size-large);
 	font-weight: var(--font-weight-medium);
 }
 
-.ny-discer-description {
+.new-discer__description {
 	display: flex;
 	flex-direction: column;
 	gap: 2rem;
@@ -28,7 +28,7 @@
 	font-weight: var(--font-weight-regular);
 }
 
-.grid-nydiscer {
+.grid__new-discer {
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	height: fit-content;

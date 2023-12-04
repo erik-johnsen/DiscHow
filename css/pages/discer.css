@@ -110,7 +110,7 @@
 
 /* the discs */
 
-.grid-discer {
+.grid__discer {
 	position: relative;
 	display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -262,7 +262,7 @@
 		font-size: var();
 		height: 100vh;
 	}
-	.grid-discer {
+	.grid__discer {
 		width: 100%;
 	}
 	.mobile-filter-button {

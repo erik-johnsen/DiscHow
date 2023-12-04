@@ -73,7 +73,7 @@ header {
 	flex-direction: column;
 	width: 100%;
 	height: 100%;
-	gap: 7.44rem
+	gap: 7.44rem;
 }
 
 .footer-content_text {
@@ -94,9 +94,10 @@ header {
 	text-align: left;
 }
 
-.foot-contact-info {
+.footer-contact-info {
 	display: flex;
 	flex-direction: column;
+	justify-content: center;
 }
 
 .footer-websitename {
