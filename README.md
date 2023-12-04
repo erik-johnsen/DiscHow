@@ -28,5 +28,6 @@ Disc Images:
 * DG Shop
 
 ### Related links
-Netlify: [Semesterassignment 5 - Hovedprosjekt](https://warm-donut-96b12a.netlify.app)
-GitHub: [DiscHow](https://github.com/erik-johnsen/DiscHow/tree/main)
+
+* Netlify: [Semesterassignment 5 - Hovedprosjekt](https://warm-donut-96b12a.netlify.app)
+* GitHub: [DiscHow](https://github.com/erik-johnsen/DiscHow/tree/main)
