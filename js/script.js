@@ -245,12 +245,18 @@ sidebarCloseButton.addEventListener('click', mobileHideFilters)
 // Kontakt oss form, check if every field is filled out function
 
 const validateForm = () => {
-	if(contactForm.checkValidity() === true) {
-		storingInputValue()
-
+	if(contactForm.checkValidity() === true && !submitButton.classList.contains("contact-form_checkmark")) {
+		
 		submitButton.textContent = ""
 		submitButton.classList.remove("contact-form_submit")
 		submitButton.classList.add("contact-form_checkmark")
+		setTimeout(() => {
+			storingInputValue()
+
+			submitButton.textContent = "Send inn!"
+			submitButton.classList.add("contact-form_submit")
+			submitButton.classList.remove("contact-form_checkmark")
+		}, 1500)
 	}
 	contactInputFields.forEach(input => {
 		if(input.checkValidity() === false) {
@@ -265,10 +271,8 @@ const validateForm = () => {
 
 const storingInputValue = () => {
 
-	userNumber += 1
 
 	let personInfo = {
-		userNumber: userNumber,
 		name: formNameInput.value,
 		number: formNumberInput.value,
 		email: formMailInput.value,
@@ -277,6 +281,10 @@ const storingInputValue = () => {
 
 	storedContactInfo.push(personInfo)
 	console.log(storedContactInfo);
+	formNameInput.value = ""
+	formNumberInput.value = ""
+	formMailInput.value = ""
+	formCommentInput.value = ""
 }
 
 submitButton.addEventListener("click", validateForm)
