@@ -35,3 +35,15 @@
 	gap: 0.93rem;
 	margin-top: 4rem;
 }
+
+/* responsive */
+
+@media screen and (max-width: 1261px) {
+	.grid__new-discer {
+		grid-template-columns: repeat(2, 1fr);
+		width: fit-content;
+		margin: 0 auto;
+		gap: 0.93rem;
+		margin-top: 2rem;
+	}
+}
