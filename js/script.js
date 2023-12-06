@@ -176,8 +176,8 @@ function ShowPages(event) {
 		if (site.dataset.page === pageToDisplay) {
 			site.classList.add("visible")
 		}
-
-		if (button.dataset.button === "discer") {
+		
+		if (button.dataset.button === "discer" || button.dataset.button === "home") {
 			footer.classList.add("visible")
 		} else {
 			footer.classList.remove("visible")
