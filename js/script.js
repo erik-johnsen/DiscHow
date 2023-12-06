@@ -98,21 +98,26 @@ const discPopup = (event) => {
 	discs.forEach(disc => {
 		if(discThatPopup === disc.name) {
 			let discPopupTemplate = `<div class="disc-popup">` +
-										`<span class="disc-popup-title">`+
-											`<img class="disc-popup-img" src="${disc.image}" alt="Image of the disc ${disc.name}">`+
-											`<div class="disc-popup-title-text">`+
-												`<div class="disc-popup-title_name">${disc.name}</div>` +
-												`<div class="disc-popup-title_number">${disc.speed} ${disc.glide} ${disc.turn} ${disc.fade}</div>`+
-												`<div class="disc-popup-title_brand">${disc.brand}</div>`+
+										`<img class="disc-popup-img" src="${disc.image}" alt="Image of the disc ${disc.name}">`+
+										`<div class="disc-popup-content">`+
+											`<div class="disc-popup-text">`+
+
+												`<div class="disc-popup-text_name">${disc.name}</div>` +
+
+												`<span class="disc-popup-text_number">` +
+													`<span>Nummer</span>`+
+													`<span>${disc.speed} ${disc.glide} ${disc.turn} ${disc.fade}</span>`+
+												`</span>` +
+
+												`<span class="disc-popup-text_brand">` +
+													`<span>Merke</span>`+
+													`<span>${disc.brand}</span>`+
+												`</span>` +
+												
+												`<div class="disc-popup-description">${disc.description}</div>`+
 											`</div>`+
 											`<button class="button-popup-close">close</button>`+
-										`</span>`+
-										`<div class="disc-popup-description">`+
-												`<div class="disc-popup_description">`+
-													`<div class="disc-popup-description_title">Informasjon om discen</div>`+
-													`<div class="disc-popup-description_description">${disc.description}</div>`+
-												`</div>`+
-										`</div>` +
+										`</div>`+
 									`</div>`
 
 			const discHtml = new DOMParser().parseFromString(discPopupTemplate, "text/html")
