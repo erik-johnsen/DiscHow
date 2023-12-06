@@ -42,11 +42,16 @@ const formCommentInput = document.querySelector(".contact-form_comment")
 
 let storedContactInfo = []
 
-let userNumber = 0
-
+let brandWithUppercase
 // adding discs to DOM "Discer" page
 
 discs.forEach(disc => {
+	if(disc.brand === "mvp") {
+		brandWithUppercase = disc.brand.toUpperCase()
+	} else {
+		brandWithUppercase = disc.brand.charAt(0).toUpperCase() + disc.brand.slice(1)
+	}
+	
 	
 	let discString = `<div class="disc filter-discs" data-brand="${disc.brand}" data-disc-type="${disc.discType}" data-name="${disc.name}">`+  
 						`<div class="disc-img">` +
@@ -55,7 +60,7 @@ discs.forEach(disc => {
 						`<div class="disc-info">`+
 							`<div class="disc-tall">${disc.speed} ${disc.glide} ${disc.turn} ${disc.fade}</div>`+
 							`<div class="disc-navn">${disc.name}</div>`+
-							`<div class="disc-merke">${disc.brand}</div>` +
+							`<div class="disc-merke">${brandWithUppercase}</div>` +
 						`</div>`+
 					`</div>`
 
@@ -69,6 +74,11 @@ discs.forEach(disc => {
 // adding discs to DOM "Nybegynner discer" page
 
 newDiscs.forEach(disc => {
+	if(disc.brand === "mvp") {
+		brandWithUppercase = disc.brand.toUpperCase()
+	} else {
+		brandWithUppercase = disc.brand.charAt(0).toUpperCase() + disc.brand.slice(1)
+	}
 	
 	let discString = `<div class="disc" data-name="${disc.name}">`+  
 						`<img class="disc-img" src="${disc.image}" alt="Image of the disc ${disc.name}"">` +
@@ -96,6 +106,13 @@ const discPopup = (event) => {
 	const discThatPopup = button.dataset.name
 
 	discs.forEach(disc => {
+
+		if(disc.brand === "mvp") {
+			brandWithUppercase = disc.brand.toUpperCase()
+		} else {
+			brandWithUppercase = disc.brand.charAt(0).toUpperCase() + disc.brand.slice(1)
+		}
+
 		if(discThatPopup === disc.name) {
 			let discPopupTemplate = `<div class="disc-popup">` +
 										`<img class="disc-popup-img" src="${disc.image}" alt="Image of the disc ${disc.name}">`+
@@ -111,7 +128,7 @@ const discPopup = (event) => {
 
 												`<span class="disc-popup-text_brand">` +
 													`<span>Merke</span>`+
-													`<span>${disc.brand}</span>`+
+													`<span>${brandWithUppercase}</span>`+
 												`</span>` +
 												
 												`<div class="disc-popup-description">${disc.description}</div>`+
