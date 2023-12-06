@@ -175,7 +175,7 @@
 	transform: translate(-50%, -50%);
 	z-index: 1;
 	width: fit-content;
-	height: 80%;
+	height: fit-content;
 	background-color: #FFF;
 	border-radius: 1.25rem;
 	border: 1px solid black;

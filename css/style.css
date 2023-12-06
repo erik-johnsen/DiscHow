@@ -73,7 +73,7 @@ header {
 	flex-direction: column;
 	width: 100%;
 	height: 100%;
-	gap: 7.44rem;
+	gap: 6rem;
 }
 
 .footer-content_text {
@@ -91,6 +91,7 @@ header {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
+	align-items: center;
 	text-align: left;
 }
 
