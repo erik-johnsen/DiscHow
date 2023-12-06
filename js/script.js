@@ -7,11 +7,6 @@ import { newDiscs } from './discs.js';
 const gridDiscer = document.querySelector(".grid__discer")
 const gridNyDiscer = document.querySelector(".grid__new-discer")
 
-// discs popup
-
-const discerPage = document.querySelector(".discer")
-const everyDiscInGrid = document.querySelectorAll(".disc")
-
 // nav buttons 
 
 const navButtons = document.querySelectorAll(".nav-button")
@@ -91,7 +86,10 @@ newDiscs.forEach(disc => {
 })
 
 
-// disc description popup
+// disc description popup, i need to have the queryselectors below where i add the elements to DOM
+
+const discerPage = document.querySelector(".discer")
+const everyDiscInGrid = document.querySelectorAll(".disc")
 
 const discPopup = (event) => {
 	const button = event.currentTarget
@@ -141,7 +139,6 @@ const discPopup = (event) => {
 
 everyDiscInGrid.forEach(disc => {
 	disc.addEventListener("click", discPopup)
-
 })
 
 //nav buttons
