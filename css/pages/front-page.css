@@ -9,7 +9,7 @@
 	display: flex;
 	flex-direction: row;
 	width: 100vw;
-	height: 45rem;
+	height: 40rem;
 	margin-top: 2.6rem;
 }
 
@@ -25,9 +25,6 @@
 	background-color: aqua;
 }
 
-.front-page-title {
-	font-size: var(--font-size-huge);
-}
 
 .front-page_text {
 	width: 32rem;
@@ -41,3 +38,25 @@
 	width: 100%;
 	height: 100%;
 }
+
+@media screen and (max-width: 1117px) {
+	.front-page-container {
+		flex-direction: column;
+		height: fit-content;
+	}
+	.front-page_content {
+		font-size: var(--font-size-header);
+		flex-basis: 0;
+		height: fit-content;
+	}
+	.front-page_text {
+		width: fit-content;
+		margin: auto;
+		height: fit-content;
+		padding: 4rem 1rem 4rem 1rem;
+	}
+	.front-page_image {
+		flex-basis: 0;
+	}
+}
+
