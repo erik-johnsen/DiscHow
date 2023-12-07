@@ -201,7 +201,7 @@
 	display: flex;
 	flex-direction: column;
 	width: 20rem;
-	height: 20rem;
+	height: fit-content;
 	font-family: var(--font-primary);
 }
 
@@ -270,5 +270,10 @@
 	}
 	.sidebar-mobile-close {
 		display: flex;
+	}
+	.disc-popup {
+		flex-direction: column;
+		align-items: center;
+		gap: 0;
 	}
 }
